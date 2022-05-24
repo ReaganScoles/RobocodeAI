@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4175a2ef-65fa-4545-8a68-11cdb19918b4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/Behavior.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/Behavior.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/BehaviorTree.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/BehaviorTree.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/Behavior_TODO.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/Behavior_TODO.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/QueueList.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/QueueList.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/QueueList/QueueList_TODO.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/QueueList/QueueList_TODO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/WumpusWorld/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/WumpusWorld/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/WumpusWorld/WumpusWorld.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/WumpusWorld/WumpusWorld.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathPlannerApp/PathPlannerApp.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathPlannerApp/PathPlannerApp.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/TileSystem/TileSystem.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/TileSystem/TileSystem.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C - Flocking/Project/StudentAI/Flock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C - Flocking/Project/StudentAI/Flock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D - Reversi/Project/StudentAI/StudentAI_TODO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D - Reversi/Project/StudentAI/StudentAI_TODO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D - Reversi/Project/TreeVisualization/Graphviz4Net.Core/Dot/AntlrParser/Generated/DotGrammarLexer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D - Reversi/Project/TreeVisualization/Graphviz4Net.Core/Dot/AntlrParser/Generated/DotGrammarLexer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D - Reversi/Project/TreeVisualization/Graphviz4Net.Core/Dot/AntlrParser/Generated/DotGrammarParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D - Reversi/Project/TreeVisualization/Graphviz4Net.Core/Dot/AntlrParser/Generated/DotGrammarParser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student Robot/fs_student/YourRobotName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/afi.FailBot_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/afi.PassBot_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.CantTouchDis_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.CarRamRod_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Glitch_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Kippycakes_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.MacGyverBot_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.OptimusPrime_1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Pwninator_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Roflbot_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Roomba_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/examples.SweetTea_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.BruceLee_4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.ChuckNorris_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.CrazyBot_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.IDKbot_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Irsin_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Terminator_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Trigonometric_Hero_2_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Zaalbar_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Zatoichi_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Zeronine_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.EliteFour_4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.PerryOhioCommunityRowboatTeam_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.RobocodeReckoning_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.Syndicate_1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.TeamPlatypus_1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Corners.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Crazy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Fire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Interactive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Interactive_v2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/MyFirstJuniorRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/MyFirstRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/PaintingRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/RamFire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/SittingDuck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/SpinBot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Target.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/TrackFire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Tracker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/VelociRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Walls.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/Alien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/AlienComposition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/MasterAndSlave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/ProxyOfGreyEminence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/RegullarMonk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/Slave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/samplesentry/BorderGuard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/samplesentry/BorderGuard.properties" beforeDir="false" afterPath="$PROJECT_DIR$/exec/robots/samplesentry/BorderGuard.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/MyFirstDroid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/MyFirstLeader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/MyFirstTeam.team" beforeDir="false" afterPath="$PROJECT_DIR$/exec/robots/sampleteam/MyFirstTeam.team" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/Point.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/RobotColors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/1.1 - Fundamentals of AI.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/1.1 - Fundamentals of AI.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/1.2 - Knowledge Representation.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/1.2 - Knowledge Representation.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/2.1 - Search Fundamentals.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/2.1 - Search Fundamentals.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/2.2 - Breadth First Search.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/2.2 - Breadth First Search.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/2.3 - Best First Searches.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/2.3 - Best First Searches.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/3.1 - Search Graphs.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/3.1 - Search Graphs.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/3.2 - Hierarchical Path Planning.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/3.2 - Hierarchical Path Planning.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/3.3 - Action Planning.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/3.3 - Action Planning.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/4.1 - Other Searches.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/4.1 - Other Searches.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/4.2 - Genetic Algorithms.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/4.2 - Genetic Algorithms.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/5.1 - Steering Behaviors.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/5.1 - Steering Behaviors.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/8.1 - Rule-Based Systems.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/8.1 - Rule-Based Systems.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/8.2 - Neural Networks.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/8.2 - Neural Networks.ppt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Source/fullsail/YourRobotName.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="740" />
+    <option name="y" value="360" />
+    <option name="width" value="1781" />
+    <option name="height" value="1144" />
+  </component>
+  <component name="ProjectId" id="29ajWBBKGNMJ0kSPtmirTY6IYFf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers ProjectPane="false" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Robocode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Robocode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Robocode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-excluded-files" value="false" />
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/reaga/Documents/IntelliJ Plugins/Progress Bars/SonicProgressBar.jar&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeremiah Blanchard\IdeaProjects\Robocode\.idea" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration name="Robocode" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="robocode.Robocode" />
+      <module name="Robocode" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/exec" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/exec/libs/codesize-1.1.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Jeremiah Blanchard\IdeaProjects\Robocode\exec" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4175a2ef-65fa-4545-8a68-11cdb19918b4" name="Default" comment="" />
+      <created>1439426079449</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1439426079449</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="740" y="360" width="1781" height="1144" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2794899" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Robocode.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Student Robot/fs_student/YourRobotName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sample Robots/sample/Corners.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33280757">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Student Robot/fs_student/YourRobotName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2082019">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Robocode.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Robocode</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>robocode-libs</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
