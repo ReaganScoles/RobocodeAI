@@ -2,97 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4175a2ef-65fa-4545-8a68-11cdb19918b4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/Behavior.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/Behavior.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/BehaviorTree.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/BehaviorTree.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/Behavior_TODO.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/BehaviorTree/Behavior_TODO.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/QueueList.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/QueueList.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/QueueList/QueueList_TODO.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/QueueList/QueueList_TODO.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/WumpusWorld/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/WumpusWorld/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/WumpusWorld/WumpusWorld.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../A - Fundamentals of AI/Project/WumpusWorld/WumpusWorld.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathPlannerApp/PathPlannerApp.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathPlannerApp/PathPlannerApp.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/PathSearch/PathSearch.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../B - Path Planner/Project/TileSystem/TileSystem.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../B - Path Planner/Project/TileSystem/TileSystem.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../C - Flocking/Project/StudentAI/Flock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C - Flocking/Project/StudentAI/Flock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../D - Reversi/Project/StudentAI/StudentAI_TODO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D - Reversi/Project/StudentAI/StudentAI_TODO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../D - Reversi/Project/TreeVisualization/Graphviz4Net.Core/Dot/AntlrParser/Generated/DotGrammarLexer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D - Reversi/Project/TreeVisualization/Graphviz4Net.Core/Dot/AntlrParser/Generated/DotGrammarLexer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../D - Reversi/Project/TreeVisualization/Graphviz4Net.Core/Dot/AntlrParser/Generated/DotGrammarParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D - Reversi/Project/TreeVisualization/Graphviz4Net.Core/Dot/AntlrParser/Generated/DotGrammarParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Student Robot/fs_student/YourRobotName.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/afi.FailBot_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/afi.PassBot_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.CantTouchDis_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.CarRamRod_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Glitch_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Kippycakes_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.MacGyverBot_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.OptimusPrime_1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Pwninator_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Roflbot_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.Roomba_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/examples.SweetTea_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.BruceLee_4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.ChuckNorris_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.CrazyBot_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.IDKbot_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Irsin_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Terminator_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Trigonometric_Hero_2_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Zaalbar_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Zatoichi_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.Zeronine_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.EliteFour_4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.PerryOhioCommunityRowboatTeam_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.RobocodeReckoning_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.Syndicate_1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/halloffame.team.TeamPlatypus_1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Corners.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Crazy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Fire.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Interactive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Interactive_v2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/MyFirstJuniorRobot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/MyFirstRobot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/PaintingRobot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/RamFire.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/SittingDuck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/SpinBot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Target.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/TrackFire.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Tracker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/VelociRobot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sample/Walls.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/Alien.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/AlienComposition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/MasterAndSlave.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/ProxyOfGreyEminence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/RegullarMonk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleex/Slave.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/samplesentry/BorderGuard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/samplesentry/BorderGuard.properties" beforeDir="false" afterPath="$PROJECT_DIR$/exec/robots/samplesentry/BorderGuard.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/MyFirstDroid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/MyFirstLeader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/MyFirstTeam.team" beforeDir="false" afterPath="$PROJECT_DIR$/exec/robots/sampleteam/MyFirstTeam.team" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/robots/sampleteam/RobotColors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/1.1 - Fundamentals of AI.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/1.1 - Fundamentals of AI.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/1.2 - Knowledge Representation.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/1.2 - Knowledge Representation.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/2.1 - Search Fundamentals.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/2.1 - Search Fundamentals.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/2.2 - Breadth First Search.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/2.2 - Breadth First Search.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/2.3 - Best First Searches.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/2.3 - Best First Searches.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/3.1 - Search Graphs.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/3.1 - Search Graphs.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/3.2 - Hierarchical Path Planning.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/3.2 - Hierarchical Path Planning.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/3.3 - Action Planning.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/3.3 - Action Planning.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/4.1 - Other Searches.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/4.1 - Other Searches.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/4.2 - Genetic Algorithms.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/4.2 - Genetic Algorithms.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/5.1 - Steering Behaviors.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/5.1 - Steering Behaviors.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/8.1 - Rule-Based Systems.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/8.1 - Rule-Based Systems.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Lecture Slides/8.2 - Neural Networks.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lecture Slides/8.2 - Neural Networks.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student Robot/fs_student/RSBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Student Robot/fs_student/RSBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +15,7 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -178,14 +90,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/reaga/Documents/IntelliJ Plugins/Progress Bars/SonicProgressBar.jar&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/reaga/Documents/IntelliJ Plugins/Progress Bars/SonicProgressBar.jar",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jeremiah Blanchard\IdeaProjects\Robocode\.idea" />
