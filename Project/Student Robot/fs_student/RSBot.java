@@ -1,6 +1,7 @@
 package fs_student;
 
 import robocode.*;
+import robocode.util.Utils;
 
 import java.util.Random;
 
@@ -26,8 +27,9 @@ public class RSBot extends TeamRobot
             this.setMaxVelocity(10);
 
             ahead(500);
-            turnRight(90);
-            turnGunRight(360);
+            setTurnRight(360);
+            //turnRight(90);
+            //turnGunRight(360);
 
             //stop(); - causes the robot to stop until resume() is called
             //resume(); - causes the robot to continue moving
@@ -42,54 +44,46 @@ public class RSBot extends TeamRobot
         //Power of 3 - Travels slowest, but does the most damage
 
         //if(getOthers() < 2) //If there's only one other bot left in the game
-        //{
-        //    double enemyAngle = e.getBearing();
-        //    if(e.getDistance() < 300)
-        //    {
-        //        //double angleToFire = Math.toRadians(myStatus.getHeading() + enemyAngle % 360);
-        //        //double enemyXPos = (myStatus.getX() + Math.sin(angleToFire) * e.getDistance());
-        //        //double enemyYPos = (myStatus.getY() + Math.sin(angleToFire) * e.getDistance());
-        //        //turnGunRight(angleToFire);
-//
-        //        turnRight(enemyAngle);
-        //        fire(2);
-        //    }
-        //    else
-        //    {
-        //        turnRight(enemyAngle);
-        //        ahead(200);
-        //        fire(1);
-        //    }
-        //}
+        {
+            double enemyAngle = e.getBearing();
+            if(e.getDistance() < 300)
+            {
+                //double angleToFire = Math.toRadians(myStatus.getHeading() + enemyAngle % 360);  //convert to radians: enemyHeading + enemyBearing % 360
+                //double enemyXPos = (myStatus.getX() + Math.sin(angleToFire) * e.getDistance()); //xPos + sin(angle) * distToEnemy
+                //double enemyYPos = (myStatus.getY() + Math.sin(angleToFire) * e.getDistance()); //yPos + sin(angle) * distToEnemy
+                //turnGunRight(angleToFire);
+                //turnRight(enemyAngle);
+                //fire(2);
 
-        //If the robot is close, fire; Otherwise, don't fire
+
+
+                double enemyXPos = myStatus.getX() + 0.5f;
+                double enemyYPos = myStatus.getY() + 0.5f;
+                double enemyHeading = myStatus.getHeading() + 0.5f;
+                double gunHeading = myStatus.getGunHeading() + 0.5f;
+                double gunBearing = Utils.normalRelativeAngle(myStatus.getGunHeading() - myStatus.getHeading()) + 0.5f;
+                boolean gunReady = (myStatus.getGunHeat() <= 0);
+            }
+            else
+            {
+                turnRight(enemyAngle);
+                ahead(200);
+                fire(1);
+            }
+        }
+
         //if(e.getDistance() < 600)
         //{
-        //    //Fire with a power of 1
         //    fire(1);
-//
-        //    if(e.getDistance() < 300)
-        //    {
-        //        fire(2);
-        //    }
-        //    else if(e.getDistance() < 100)
-        //    {
-        //        fire(3);
-        //    }
         //}
-
-        if(e.getDistance() < 600)
-        {
-            fire(1);
-        }
-        else if(e.getDistance() < 300)
-        {
-            fire(2);
-        }
-        else if(e.getDistance() < 100)
-        {
-            fire(3);
-        }
+        //else if(e.getDistance() < 300)
+        //{
+        //    fire(2);
+        //}
+        //else if(e.getDistance() < 100)
+        //{
+        //    fire(3);
+        //}
     }
 
     //onHitByBullet determines what the robot does when it's hit by a bullet
