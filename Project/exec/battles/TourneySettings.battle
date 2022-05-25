@@ -1,0 +1,10 @@
+#Battle Properties
+#Wed May 25 16:13:18 EDT 2022
+robocode.battle.sentryBorderSize=100
+robocode.battle.numRounds=100
+robocode.battleField.width=600
+robocode.battle.gunCoolingRate=0.1
+robocode.battle.rules.inactivityTime=450
+robocode.battle.selectedRobots=fs_student.FailBot 1.0*,fs_student.RSBot*
+robocode.battle.hideEnemyNames=false
+robocode.battleField.height=600

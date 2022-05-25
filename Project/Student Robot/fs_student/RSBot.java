@@ -16,20 +16,36 @@ public class RSBot extends TeamRobot
         //Colors: body, gun, radar
         setColors(java.awt.Color.blue, java.awt.Color.black, java.awt.Color.blue);
 
+        setAdjustGunForRobotTurn(true);   //Have gun move independently of robot's turns
+        setAdjustRadarForRobotTurn(true);   //Have radar move independently of robot's turns
+        //setAdjustRadarForGunTurn(true); //Have radar move independently of gun's turns
+
+        forward = true;
+        turnRadarRightRadians(Double.POSITIVE_INFINITY);
+
         //Main loop - loop forever
         while(true)
         {
-            //setAdjustGunForRobotTurn(true);   //Have gun move independently of robot's turns
-            //setAdjustRadarForRobotTurn(true);   //Have radar move independently of robot's turns
-            //setAdjustRadarForGunTurn(true); //Have radar move independently of gun's turns
+            //this.setMaxVelocity(10);
 
-            forward = true;
-            this.setMaxVelocity(10);
+            //Random rand = new Random();
+            //Random rand = new Random();
+            //int upperbound = 10;
+            //int upperbound = 10;
+            //int randNum = rand.nextInt(upperbound);
+            //int randNum = rand.nextInt(upperbound);
 
-            ahead(500);
-            setTurnRight(360);
+            //ahead(randNum * 10);       //Move forward by a large amount
+            //turnRadarRight(360);     //Scan for enemies
+            //if(getRadarTurnRemaining() == 0)
+            //{
+            //    turnRadarRightRadians(Double.POSITIVE_INFINITY);
+            //}
             //turnRight(90);
-            //turnGunRight(360);
+            setTurnRadarRight(360);
+
+            scan();
+            execute();
 
             //stop(); - causes the robot to stop until resume() is called
             //resume(); - causes the robot to continue moving
@@ -43,47 +59,37 @@ public class RSBot extends TeamRobot
         //Power of 2 - Travels slower, but does more damage than 1
         //Power of 3 - Travels slowest, but does the most damage
 
-        //if(getOthers() < 2) //If there's only one other bot left in the game
+        //Angle towards target
+        double angleToEnemy = getHeading() - getRadarHeading() + e.getBearing();
+
+        //Subtract current radar heading to get turn required to face enemy - be sure it's normalized
+        //double radarTurn = Utils.normalRelativeAngle(angleToEnemy - getRadarHeading());
+
+        //setTurnRadarLeftRadians(getRadarTurnRemainingRadians());    //Lock onto enemy
+        //setTurnRadarLeftRadians(Utils.normalRelativeAngle(radarTurn));
+        setTurnRadarRight(angleToEnemy);
+        //setTurnGunRightRadians(radarTurn);
+        //setTurnGunRight(angleToEnemy);
+        setTurnGunLeft(angleToEnemy);
+
+        //setTurnRight(e.getBearing() + 90);
+        //setAhead(1000);
+
+        //setTurnGunRight(e.getBearing());
+        if(e.getDistance() < 600)
         {
-            double enemyAngle = e.getBearing();
+            fire(1);
             if(e.getDistance() < 300)
             {
-                //double angleToFire = Math.toRadians(myStatus.getHeading() + enemyAngle % 360);  //convert to radians: enemyHeading + enemyBearing % 360
-                //double enemyXPos = (myStatus.getX() + Math.sin(angleToFire) * e.getDistance()); //xPos + sin(angle) * distToEnemy
-                //double enemyYPos = (myStatus.getY() + Math.sin(angleToFire) * e.getDistance()); //yPos + sin(angle) * distToEnemy
-                //turnGunRight(angleToFire);
-                //turnRight(enemyAngle);
-                //fire(2);
-
-
-
-                double enemyXPos = myStatus.getX() + 0.5f;
-                double enemyYPos = myStatus.getY() + 0.5f;
-                double enemyHeading = myStatus.getHeading() + 0.5f;
-                double gunHeading = myStatus.getGunHeading() + 0.5f;
-                double gunBearing = Utils.normalRelativeAngle(myStatus.getGunHeading() - myStatus.getHeading()) + 0.5f;
-                boolean gunReady = (myStatus.getGunHeat() <= 0);
+                fire(2);
             }
-            else
+            else if(e.getDistance() < 100)
             {
-                turnRight(enemyAngle);
-                ahead(200);
-                fire(1);
+                fire(3);
             }
         }
 
-        //if(e.getDistance() < 600)
-        //{
-        //    fire(1);
-        //}
-        //else if(e.getDistance() < 300)
-        //{
-        //    fire(2);
-        //}
-        //else if(e.getDistance() < 100)
-        //{
-        //    fire(3);
-        //}
+        execute();
     }
 
     //onHitByBullet determines what the robot does when it's hit by a bullet
@@ -101,43 +107,40 @@ public class RSBot extends TeamRobot
     //    {
     //        turnRight(70);
     //    }
-//
+
     //    //Increase speed to avoid being shot again
     //    this.setMaxVelocity(20);
     //    waitFor(new MoveCompleteCondition(this));   //When the move is complete, return to normal speed
     //    this.setMaxVelocity(10);
     //}
 
+    public void reverseDirection()
+    {
+        if (forward == true)    //If bot is moving forward, make it move backward
+        {
+            setBack(40000);
+            forward = false;
+        }
+        else    //If bot is moving backward, make it move forward
+        {
+            setAhead(40000);
+            forward = true;
+        }
+    }
+
     //onHitWall determines what to do if the bot hits the wall
     public void onHitWall(HitWallEvent e)
     {
-        //Based on the bearing of the wall, turn toward that heading
-        //double wallBearing = e.getBearing();
-//
-        //if(this.getHeading() > 0)
-        //{
-        //    back(100);
-        //    turnRight(-wallBearing);
-        //}
-        //else
-        //{
-        //    turnRight(180);
-        //    back(100);
-        //    turnRight(wallBearing);
-        //}
-
-        //if(forward == true)
-        //{
-        //    back(100);
-        //    forward = false;
-        //}
-        //else
-        //{
-        //    ahead(100);
-        //    forward = true;
-        //}
-
-        //turnRight(90);
-        stop();
+        //If the bot hit the wall, reverse its direction
+        reverseDirection();
     }
+
+    //public void onHitRobot(HitRobotEvent e)
+    //{
+    //    //If we ran into the other bot, reverse
+    //    if(e.isMyFault())
+    //    {
+    //        reverseDirection();
+    //    }
+    //}
 }
