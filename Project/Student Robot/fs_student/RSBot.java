@@ -9,6 +9,7 @@ public class RSBot extends TeamRobot
 {
     private robocode.RobotStatus myStatus;  //Used for finding direction to fire
     boolean forward;
+    double enemyEnergy = 100;
 
     //Run represents the bot's default behavior
     public void run()
@@ -18,7 +19,7 @@ public class RSBot extends TeamRobot
 
         setAdjustGunForRobotTurn(true);   //Have gun move independently of robot's turns
         setAdjustRadarForRobotTurn(true);   //Have radar move independently of robot's turns
-        //setAdjustRadarForGunTurn(true); //Have radar move independently of gun's turns
+        setAdjustRadarForGunTurn(true); //Have radar move independently of gun's turns
 
         forward = true;
         turnRadarRightRadians(Double.POSITIVE_INFINITY);
@@ -36,13 +37,11 @@ public class RSBot extends TeamRobot
             //int randNum = rand.nextInt(upperbound);
 
             //ahead(randNum * 10);       //Move forward by a large amount
-            //turnRadarRight(360);     //Scan for enemies
-            //if(getRadarTurnRemaining() == 0)
-            //{
-            //    turnRadarRightRadians(Double.POSITIVE_INFINITY);
-            //}
+            if(getRadarTurnRemaining() == 0)
+            {
+                setTurnRadarRightRadians(Double.POSITIVE_INFINITY);    //Scan for enemies
+            }
             //turnRight(90);
-            setTurnRadarRight(360);
 
             scan();
             execute();
@@ -59,23 +58,64 @@ public class RSBot extends TeamRobot
         //Power of 2 - Travels slower, but does more damage than 1
         //Power of 3 - Travels slowest, but does the most damage
 
+        double moveDir = getHeading();
+
         //Angle towards target
-        double angleToEnemy = getHeading() - getRadarHeading() + e.getBearing();
+        double angleToEnemy = getHeadingRadians() + e.getBearingRadians();
+
+        moveDir = angleToEnemy;
+        setBack(200);
 
         //Subtract current radar heading to get turn required to face enemy - be sure it's normalized
-        //double radarTurn = Utils.normalRelativeAngle(angleToEnemy - getRadarHeading());
+        double radarTurn = Utils.normalRelativeAngle(angleToEnemy - getRadarHeadingRadians());
+        //Subtract current gun heading to get turn required to face enemy - be sure it's normalized
+        double gunTurn = Utils.normalRelativeAngle(angleToEnemy - getGunHeadingRadians());
 
-        //setTurnRadarLeftRadians(getRadarTurnRemainingRadians());    //Lock onto enemy
-        //setTurnRadarLeftRadians(Utils.normalRelativeAngle(radarTurn));
-        setTurnRadarRight(angleToEnemy);
-        //setTurnGunRightRadians(radarTurn);
-        //setTurnGunRight(angleToEnemy);
-        setTurnGunLeft(angleToEnemy);
+        //Distance we want to scan from middle of enemy to either side
+        //The 36.0 is how many units from the center of the enemy robot it scans
+        double extraTurnRadar = Math.min(Math.atan(36.0 / e.getDistance()), Rules.RADAR_TURN_RATE_RADIANS);
+        double extraTurnGun = Math.min(Math.atan(36.0 / e.getDistance()), Rules.GUN_TURN_RATE_RADIANS);
 
-        //setTurnRight(e.getBearing() + 90);
+        //Adjust the radar turn so it goes that much further in the direction it is going to turn
+        //If we want to turn it left, turn it even more left. If right, turn it even more right
+        //This allows us to overshoot our enemy so that we get a good sweep that will not slip
+        if(radarTurn < 0)
+        {
+            radarTurn -= extraTurnRadar;
+        }
+        else
+        {
+            radarTurn += extraTurnRadar;
+        }
+        if(gunTurn < 0) //Same for gun
+        {
+            gunTurn -= extraTurnGun;
+        }
+        else
+        {
+            gunTurn += extraTurnGun;
+        }
+
+        //Turn the radar
+        setTurnRadarRightRadians(radarTurn);
+        //Turn the gun
+        setTurnGunRightRadians(gunTurn);
+
+        setTurnRight(e.getBearing());
         //setAhead(1000);
+        if(getTime() % 20 == 0) //Strafe by changing direction every 20 ticks
+        {
+            moveDir *= -1;
+            setAhead(150 * moveDir);
+        }
 
-        //setTurnGunRight(e.getBearing());
+        //Find enemy energy
+        double energyOffset = enemyEnergy - e.getEnergy();
+        enemyEnergy = e.getEnergy();
+
+        //Find enemy bullet velocity
+        double bulletVel = 20 - 3 * energyOffset;
+
         if(e.getDistance() < 600)
         {
             fire(1);

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4175a2ef-65fa-4545-8a68-11cdb19918b4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Student Robot/fs_student/RSBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Student Robot/fs_student/RSBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/config/robocode.properties" beforeDir="false" afterPath="$PROJECT_DIR$/exec/config/robocode.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/config/window.properties" beforeDir="false" afterPath="$PROJECT_DIR$/exec/config/window.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,14 +94,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/reaga/Documents/IntelliJ Plugins/Progress Bars/SonicProgressBar.jar",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/reaga/Documents/IntelliJ Plugins/Progress Bars/SonicProgressBar.jar&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jeremiah Blanchard\IdeaProjects\Robocode\.idea" />
