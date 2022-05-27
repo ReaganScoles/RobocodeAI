@@ -3,208 +3,193 @@ package fs_student;
 import robocode.*;
 import robocode.util.Utils;
 
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
+import robocode.util.Utils;
 import java.util.Random;
 
 public class RSBot extends TeamRobot
 {
-    private robocode.RobotStatus myStatus;  //Used for finding direction to fire
+    static int currentEnemyVelocity;
+    static int aimingEnemyVelocity;
+    double velocityToAimAt;
+    boolean fired;
     boolean forward;
-    double PERCENT_BUFFER = 0.20;
-    double enemyEnergy = 100;
-    private FailBot.Enemy enemy;
+    double prevTime;
+    int count;
+    int averageCount;
+    //Array is used to store enemy velocity at different ticks
+    //  The first index represents number of ticks since game started (or since last reset of this value)
+    //  The second index is an int representation of enemy's velocity on a particular tick
+    static double enemyVelocities[][] = new double[500][4];
+    static double turn = 2;
+    int turnDir = 1;
+    int moveDir = 1;
+    double prevEnemyHeading;
+    double prevEnergy = 100;
 
     //Run represents the bot's default behavior
     public void run()
     {
-        //Colors: body, gun, radar
-        setColors(java.awt.Color.blue, java.awt.Color.black, java.awt.Color.blue);
+        //Set bot colors
+        setBodyColor(Color.blue);
+        setGunColor(Color.blue);
+        setRadarColor(Color.blue);
+        setScanColor(Color.blue);
 
-        setAdjustGunForRobotTurn(true);   //Have gun move independently of robot's turns
-        setAdjustRadarForRobotTurn(true);   //Have radar move independently of robot's turns
-        setAdjustRadarForGunTurn(true); //Have radar move independently of gun's turns
+        setAdjustGunForRobotTurn(true); //Make gun movement independent of bot turning
+        setAdjustRadarForGunTurn(true); //Make radar movement independent of gun turning
 
         forward = true;
-        turnRadarRightRadians(Double.POSITIVE_INFINITY);
-        double width = getBattleFieldWidth();
-        double height = getBattleFieldHeight();
-        double wallAvoidDistance = 60;
-        double centerX = width / 2;
-        double centerY = height / 2;
-        double currentDir = getHeading();
-        double buffer = PERCENT_BUFFER * Math.max(width, height);
 
-        //Main loop - loop forever
-        while(true)
+        //Main while loop
+        while (true)
         {
-            //this.setMaxVelocity(10);
-
-            double xPos = getX();
-            double yPos = getY();
-
-            if(xPos < wallAvoidDistance || xPos > width - wallAvoidDistance)
-            {
-                reverseDirection();
-            }
-            else if(yPos < wallAvoidDistance || yPos > height - wallAvoidDistance)
-            {
-                reverseDirection();
-            }
-
-            if(yPos < buffer)   //Too close to the bottom
-            {
-                if(getHeading() < 180)
-                {
-                    setTurnLeft(90);
-                }
-                else
-                {
-                    setTurnRight(90);
-                }
-            }
-            else if(yPos > height - buffer)  //Too close to the top
-            {
-                if(getHeading() < 90)
-                {
-                    setTurnRight(90);
-                }
-                else
-                {
-                    setTurnLeft(90);
-                }
-            }
-            else    //Go straight forward
-            {
-                setTurnRight(0);
-                setTurnLeft(0);
-            }
-            setAhead(10);
-
-            if(getRadarTurnRemaining() == 0)
-            {
-                setTurnRadarRightRadians(Double.POSITIVE_INFINITY);    //Scan for enemies
-            }
-            //turnRight(90);
-
-            scan();
-            execute();
+            //Scan
+            turnRadarRightRadians(Double.POSITIVE_INFINITY);
         }
     }
 
-    //onScannedRobot tells the bot what to do when another robot is scanned/seen
+    //onScannedRobot determines what the bot does when it scans an enemy
     public void onScannedRobot(ScannedRobotEvent e)
     {
-        //Power of 1 - Travels fastest, but does the least damage
-        //Power of 2 - Travels slower, but does more damage than 1
-        //Power of 3 - Travels slowest, but does the most damage
+        //Get bearing to use for targeting - value between enemy's relation to up and its direction - helps get enemy position
+        double absBearing = e.getBearingRadians() + getHeadingRadians();
 
-        double moveDir = getHeading();
+        //Graphics2D g = getGraphics();
 
-        //Angle towards target
-        double angleToEnemy = getHeadingRadians() + e.getBearingRadians();
-
-        moveDir = angleToEnemy;
-
-        //Subtract current radar heading to get turn required to face enemy - be sure it's normalized
-        double radarTurn = Utils.normalRelativeAngle(angleToEnemy - getRadarHeadingRadians());
-        //Subtract current gun heading to get turn required to face enemy - be sure it's normalized
-        //double gunTurn = Utils.normalRelativeAngle(angleToEnemy - getGunHeadingRadians());
-
-        //Distance we want to scan from middle of enemy to either side
-        //The 36.0 is how many units from the center of the enemy robot it scans
-        double extraTurnRadar = Math.min(Math.atan(36.0 / e.getDistance()), Rules.RADAR_TURN_RATE_RADIANS);
-        //double extraTurnGun = Math.min(Math.atan(36.0 / e.getDistance()), Rules.GUN_TURN_RATE_RADIANS);
-
-        //Adjust the radar turn so it goes that much further in the direction it is going to turn
-        //If we want to turn it left, turn it even more left. If right, turn it even more right
-        //This allows us to overshoot our enemy so that we get a good sweep that will not slip
-        if(radarTurn < 0)
+        //How much do we need to turn?
+        turn += 0.2 * Math.random();    //Do random strafing to confuse enemy predictive targeting
+        if (turn > 8)
         {
-            radarTurn -= extraTurnRadar;
-        }
-        else
-        {
-            radarTurn += extraTurnRadar;
-        }
-        //if(gunTurn < 0) //Same for gun
-        //{
-        //    gunTurn -= extraTurnGun;
-        //}
-        //else
-        //{
-        //    gunTurn += extraTurnGun;
-        //}
-
-        //Turn the radar
-        setTurnRadarRightRadians(radarTurn);
-        //Turn the gun
-        //setTurnGunRightRadians(gunTurn);
-
-        setTurnRight(e.getBearing());
-        setAhead(1000);
-        //if(getTime() % 20 == 0) //Strafe by changing direction every 20 ticks
-        //{
-        //    moveDir *= -1;
-        //    setBack(150 * moveDir);
-        //}
-        if(e.getEnergy() < 100)
-        {
-            ////Turn either left or right and start moving that way
-            //Random rand = new Random();
-            ////int upperbound = 1;
-            //float randFlt = rand.nextFloat();
-            //if(randFlt < 0.5)
-            //{
-            //    turnLeft(70);
-            //}
-            //else if(randFlt >= 0.5)
-            //{
-            //    turnRight(70);
-            //}
-
-            moveDir *= -1;
+            turn = 2;
         }
 
-        //Find enemy energy
-        double energyOffset = enemyEnergy - e.getEnergy();
-        enemyEnergy = e.getEnergy();
+        //If enemy's energy gets between a certain amount (meaning enemy fired), randomize movement and turning
+        if(prevEnergy - e.getEnergy() <= 3 && prevEnergy - e.getEnergy() >= 0.1)
+        {
+            if (Math.random() > .5) //Randomize turning
+            {
+                turnDir *= -1;
+            }
+            if(Math.random() > .8)  //Randomize movement
+            {
+                moveDir *= -1;
+            }
+        }
 
-        ////Calculate firepower based on distance
-        //double firePower = Math.min(500 / e.getDistance(), 3);
-        ////Calculate speed of bullet
-        //double bulletVel = 20 - firePower * 3;
-        ////Distance = rate * time, solved for time
-        //long time = (long)(e.getDistance() / bulletVel);
-//
-        ////Calculate gun turn to predicted x, y position
-        //double futureX = myStatus.getX() + Math.sin(Math.toRadians(getHeading())) * getVelocity() * time;
-        //double futureY = myStatus.getY() + Math.sin(Math.toRadians(getHeading())) * getVelocity() * time;
-        //double absDeg = absoluteBearing(getX(), getY(), futureX, futureY);
-//
-        ////Turn gun to predicted x, y location
-        //setTurnGunRight(normalizeBearing(absDeg - getGunHeading()));
-//
-        ////If gun is cool and pointed in the right direction, fire
-        //if(getGunHeat() == 0 && Math.abs(getGunTurnRemaining()) < 10)
-        //{
-        //    setFire(firePower);
-        //}
+        //Limit how much bot can turn
+        setMaxTurnRate(turn);
+        //Limit how fast the bot can move - pixels/turn
+        setMaxVelocity(12 - turn);
+        setAhead(90 * moveDir);
+        setTurnLeft(90 * turnDir);
+        //Update default energy used to find if enemy fired
+        prevEnergy = e.getEnergy();
 
-        fire(3);
-        //if(e.getDistance() < 600)
-        //{
-        //    fire(1);
-        //    if(e.getDistance() < 300)
-        //    {
-        //        fire(2);
-        //    }
-        //    else if(e.getDistance() < 100)
-        //    {
-        //        fire(3);
-        //    }
-        //}
+        if (e.getVelocity() < -2)   //Reset index of enemy velocity to default
+        {
+            currentEnemyVelocity = 0;
+        }
+        else if (e.getVelocity() > 2)   //Update enemy velocity index
+        {
+            currentEnemyVelocity = 1;
+        }
+        else if (e.getVelocity() <= 2 && e.getVelocity() >= -2)
+        {
+            if (currentEnemyVelocity == 0)  //Update enemy velocity index
+            {
+                currentEnemyVelocity = 2;
+            }
+            else if (currentEnemyVelocity == 1) //Update enemy velocity index
+            {
+                currentEnemyVelocity = 3;
+            }
+        }
+        //If game time is greater than enemy distance from bot (12 is fine-tuning), and if enemy fired
+        if (getTime() - prevTime > e.getDistance() / 12 && fired == true)
+        {
+            aimingEnemyVelocity = currentEnemyVelocity;   //Update index used to store enemy velocities
+        }
+        else    //Otherwise, enemy didn't fire
+        {
+            fired = false;
+        }
 
-        execute();
+        enemyVelocities[count][aimingEnemyVelocity] = e.getVelocity();  //Store enemy's current velocity this tick
+        count++;    //Increment index that represents which tick corresponds with enemy's velocity
+
+        if(count == 500)    //If it's been a while, reset index
+        {
+            count = 0;
+        }
+
+        averageCount = 0;       //Index to represent which tick we should get enemy velocity from for following calculation
+        velocityToAimAt = 0;    //Representation of where bot should aim
+
+        while(averageCount < 500)
+        {
+            //Velocity bot aims at should be offset by enemy's current velocity
+            velocityToAimAt += enemyVelocities[averageCount][currentEnemyVelocity];
+            averageCount++; //Constantly update index to get current enemy velocity for next tick
+        }
+
+        velocityToAimAt /= 500;
+
+        //Get minimum of enemy's energy and bot's energy, get minimum of that and 2 (fine-tuning), make that bullet power
+        double bulletPower = Math.min(2, Math.min(e.getEnergy(), getEnergy()));
+        double myX = getX();
+        double myY = getY();
+        double enemyX = getX() + e.getDistance() * Math.sin(absBearing);    //xPos = x + distToEnemy * sinOfEnemyBearing
+        double enemyY = getY() + e.getDistance() * Math.cos(absBearing);    //yPos = y + distToEnemy * cosOfEnemyBearing
+        double enemyHeading = e.getHeadingRadians();
+        double enemyHeadingChange = enemyHeading - prevEnemyHeading; //Store change in enemy's direction
+        prevEnemyHeading = enemyHeading; //Update previous direction for use next tick
+        double deltaTime = 0;
+        double battleFieldHeight = getBattleFieldHeight();
+        double battleFieldWidth = getBattleFieldWidth();
+        double predictedX = enemyX;
+        double predictedY = enemyY;
+
+        //Loop while elapsed time * bullet power calculation < distance between bot's position and predicted enemy position
+        while ((deltaTime++) * (20.0 - 3.0 * bulletPower) < Point2D.Double.distance( myX, myY, predictedX, predictedY))
+        {
+            //Increment predicted enemy xPos by sin of enemy direction * calculated lead
+            predictedX += Math.sin(enemyHeading) * velocityToAimAt;
+            //Increment predicted enemy yPos by cos of enemy direction * calculated lead
+            predictedY += Math.cos(enemyHeading) * velocityToAimAt;
+            //Increment representation of enemy's direction by the change in its direction
+            enemyHeading += enemyHeadingChange;
+
+            //If predicted enemy position is too close to the walls, update predicted enemy position and break out of loop
+            if (predictedX < 15 || predictedY < 15 || predictedX > battleFieldWidth - 15 || predictedY > battleFieldHeight - 15)
+            {
+                //Predicted xPos = minimum of the maximum of 15 and predicted xPos, and the maximum battlefield width - 15
+                predictedX = Math.min(Math.max(15, predictedX), battleFieldWidth - 15);
+                //Predicted yPos = minimum of the maximum of 15 and predicted yPos, and the maximum battlefield height - 15
+                predictedY = Math.min(Math.max(15, predictedY), battleFieldHeight - 15);
+                break;
+            }
+        }
+
+        //Get angle between the difference of predicted xPos and bot xPos, and predicted yPos and bot yPos
+        double theta = Utils.normalAbsoluteAngle(Math.atan2(predictedX - getX(), predictedY - getY()));
+        //Turn the radar to face enemy
+        //Normalize difference between enemy bearing and radar's direction * 2
+        setTurnRadarRightRadians(Utils.normalRelativeAngle(absBearing - getRadarHeadingRadians()) * 2);
+        //Turn the gun to face enemy
+        //Normalize above angle - gun's direction
+        setTurnGunRightRadians(Utils.normalRelativeAngle(theta - getGunHeadingRadians()));
+
+        //If gun is cooled down, fire based on calculated bullet power
+        if(getGunHeat() == 0)
+        {
+            fire(bulletPower);
+            fired = true;
+        }
     }
 
     //onHitByBullet determines what the robot does when it's hit by a bullet
@@ -233,9 +218,9 @@ public class RSBot extends TeamRobot
     {
         double xo = x2 - x1;
         double yo = y2 - y1;
-        double hyp = Point2D.distance(x1, y1, x2, y2);
-        double arcSin = Math.toDegrees(Math.asin(xo / hyp));
-        double bearing = 0;
+        double hyp = Point2D.distance(x1, y1, x2, y2);  //Distance between point 1 and point 2
+        double arcSin = Math.toDegrees(Math.asin(xo / hyp));    //Inverse of sine of xPos difference and distance between points
+        double bearing = 0; //Bearing to return
 
         if(xo > 0 && yo > 0)    //Both positive = lower left
         {
@@ -253,33 +238,35 @@ public class RSBot extends TeamRobot
         {
             bearing = 180 - arcSin;
         }
+
         return bearing;
     }
 
     //Normalizes a bearing to between +180 and -180
-    double normalizeBearing(double angle)
+    double normalizeBearing(double bearing)
     {
-        while (angle >  180)
+        while (bearing > 180)
         {
-            angle -= 360;
+            bearing -= 360;
         }
-        while (angle < -180)
+        while (bearing < -180)
         {
-            angle += 360;
+            bearing += 360;
         }
-        return angle;
+
+        return bearing;
     }
 
     public void reverseDirection()
     {
-        if (forward == true)    //If bot is moving forward, make it move backward
+        if (forward == true)    //If bot is moving forward, make it move backward quite a bit
         {
-            setBack(40000);
+            setBack(5000);
             forward = false;
         }
-        else    //If bot is moving backward, make it move forward
+        else    //If bot is moving backward, make it move forward quite a bit
         {
-            setAhead(40000);
+            setAhead(5000);
             forward = true;
         }
     }
