@@ -24,6 +24,7 @@ public class RSBot extends TeamRobot
     //Array is used to store enemy velocity at different ticks
     //  The first index represents number of ticks since game started (or since last reset of this value)
     //  The second index is an int representation of enemy's velocity on a particular tick
+    //Setup: array[currentTick][velocityStoredOnTick]
     static double enemyVelocities[][] = new double[500][4];
     static double turn = 2;
     int turnDir = 1;
@@ -71,6 +72,17 @@ public class RSBot extends TeamRobot
         //If enemy's energy gets between a certain amount (meaning enemy fired), randomize movement and turning
         if(prevEnergy - e.getEnergy() <= 3 && prevEnergy - e.getEnergy() >= 0.1)
         {
+            //Random rand = new Random();
+            //float randFlt = rand.nextFloat();
+            //if(randFlt < 0.5)
+            //{
+            //    turnDir += 90;
+            //}
+            //else if(randFlt >= 0.5)
+            //{
+            //    turnDir -= 90;
+            //}
+
             if (Math.random() > .5) //Randomize turning
             {
                 turnDir *= -1;
@@ -86,7 +98,7 @@ public class RSBot extends TeamRobot
         //Limit how fast the bot can move - pixels/turn
         setMaxVelocity(12 - turn);
         setAhead(90 * moveDir);
-        setTurnLeft(90 * turnDir);
+        setTurnLeft(90 * turnDir);  //Strafe to square off against enemy
         //Update default energy used to find if enemy fired
         prevEnergy = e.getEnergy();
 
@@ -137,6 +149,7 @@ public class RSBot extends TeamRobot
             averageCount++; //Constantly update index to get current enemy velocity for next tick
         }
 
+        //This is necessary to make aiming more accurate - without this, it goes all over the place
         velocityToAimAt /= 500;
 
         //Get minimum of enemy's energy and bot's energy, get minimum of that and 2 (fine-tuning), make that bullet power
